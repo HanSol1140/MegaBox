@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="mcssam">
+    <meta name="description" content="Portfolio, RWD Template">
+    <title>MegaBox</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./images/favicon/megafavi32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/favicon/megafavi144.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="./css/MegaBox.css">
+    <!-- JS 플러그인 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 페이지 JS -->
+
+</head>
+<body>
+    <div id="wrap">
+        <!-- 1. Header -->
+        <header class="header cf">
+            <!-- Logo -->
+            <h1 class="logo"><a href="#"><img src="./images/megabox_logo.png" alt=""></a></h1>
+            <!-- /Logo -->
+            <!-- GNB -->
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">
+                            <img src="./images/Reservation.png" alt="예매">
+                            <p>예매</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/gnb_contatcus.png" alt="문의하기">
+                            <p>문의하기</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/contatcus.png" alt="고객센터">
+                            <p>고객센터</p>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/gnb_home.png" alt="대관안내">
+                            <p>대관안내</p>
+                        </a>
+                    </li>
+                    <!-- <li><a href="#">CONTACT&nbsp;US</a></li> -->
+                </ul>
+            </nav>
+            <!-- /GNB -->
+            <!-- Hamberger Toggle -->
+            <span class="menu_toggle_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+            <!-- /Hamberger Toggle -->
+            <!-- 스크립트 토글메뉴 -->
+            <!-- <script>
+                var togglemenu = 0;
+                document.querySelector(".menu_toggle_btn").addEventListener('click',function(){                    
+                    if(togglemenu == 0){
+                    document.querySelector(".gnb").style.display = "block";
+                    togglemenu = 1;
+                    }
+                    else {
+                    document.querySelector(".gnb").style.display = "none";
+                    togglemenu = 0;
+                    }
+                });
+            </script> -->
+            <!-- /스크립트 토글메뉴 -->
+        </header>
+        <!-- /1. Header -->
+        
+        <!-- 2. Slider -->
+        <article class="slider">
+            <h2 class="slider_img">
+                <img src="./images/slide1.jpg" alt="슬라이드 이미지">
+            </h2>
+            <h2 class="slider_img">
+                <img src="./images/slide2.jpg" alt="슬라이드 이미지">
+            </h2>
+            <h2 class="slider_img">
+                <img src="./images/slide3.jpg" alt="슬라이드 이미지">
+            </h2>
+        </article>
+        <!-- Slide script -->
+        <script>
+            var slideindex = 0;
+            slide();
+            function slide(){
+                var i;
+                var slider = document.querySelectorAll('.slider_img');
+                for(i=0; i<slider.length; i++) {
+                    slider[i].style.display="none";
+                }
+                slideindex++;
+
+                if(slideindex > slider.length){
+                    slideindex = 1;
+                }
+                slider[slideindex-1].style.display="block";
+                setTimeout(slide,1200);
+
+            }
+
+            
+        </script>
+        <!-- /Slide script -->
+        <!-- /2. Slider -->
+
+        <!-- 3. Content -->
+        <section class="content">
+            <!-- 3-1. Display -->
+            <article class="display_section container">
+                <div class="cf">
+                    <h2 class="sec_title">상영 순위</h2>
+                </div>
+            </article>
+            <!-- /3-1. Display -->
+
+            <!-- 3-2. Promotion -->
+            <article class="promotion_section container">
+                <h2>
+                    <ul class="promotion_list cf">
+                        <li>
+                            <a href="#">
+                                <img src="./images/boxoffice (1).jpg" alt="프로모2">
+                            </a>
+                                <h3>아바타</h3>
+                                <h4><img src="./images/star.png" alt="별점"><span>9.7&nbsp;/&nbsp;10</span></h4>
+                                <button>예매하기</button>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/boxoffice (2).jpg" alt="프로모2">
+                            </a>
+                                <h3>영웅</h3>
+                                <h4><img src="./images/star.png" alt="별점"><span>9.4&nbsp;/&nbsp;10</span></h4>
+                                <button>예매하기</button>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/boxoffice (3).jpg" alt="프로모2">
+                            </a>
+                                <h3>오늘 밤, 세계에서 이 사랑이 사라진다 해도</h3>
+                                <h4><img src="./images/star.png" alt="별점"><span>9.4&nbsp;/&nbsp;10</span></h4>
+                                <button>예매하기</button>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/boxoffice (4).jpg" alt="프로모2">
+                            </a>
+                                <h3>올빼미</h3>
+                                <h4><img src="./images/star.png" alt="별점"><span>9.4&nbsp;/&nbsp;10</span></h4>
+                                <button>예매하기</button>
+                        </li>
+                    </ul>
+                </h2>
+            </article>
+            <!-- /3-2. Promotion -->
+
+            <hr class="divider">
+
+            <!-- 3-3. Work -->
+            <article class="work_section">
+                <div>
+                    <h2 class="sec_title container">다른 영화보기</h2>
+                    <ul class="work_list cf">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>페르시아어 수업</h3>
+                                    <span>감독</span><br>
+                                    <p>
+                                        바딤 피얼먼
+                                    </p>
+                                </div>
+                                <img src="./images/movie (1).jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>3000년의 기다림</h3>
+                                    <span>감독</span><br>
+                                    <p>
+                                        조지 밀러
+
+                                    </p>
+                                </div>
+                                <img src="./images/movie (2).jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>가가린</h3>
+                                    <span>감독</span><br>
+                                    <p>
+                                        파니 리에타르<br>
+                                        제레미 투루일
+                                    </p>
+                                </div>
+                                <img src="./images/movie (3).jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>드라이브 마이카</h3>
+                                    <span>감독</span><br>
+                                    <p>
+                                        하마구치 류스케
+                                    </p>
+                                </div>
+                                <img src="./images/movie (4).jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>라비앙 로즈</h3>
+                                    <span>감독</span><br>
+                                    <p>
+                                        올리비에 다한
+                                    </p>
+                                </div>
+                                <img src="./images/movie (5).jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>본즈 앤 올</h3>
+                                    <span>감독</span><br>
+                                    <p>
+                                        루카 구아다니노
+                                    </p>
+                                </div>
+                                <img src="./images/movie (6).jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>젠틀맨</h3>
+                                    <span>감독</span><br>
+                                    <p>
+                                        김경원
+                                    </p>
+                                </div>
+                                <img src="./images/movie (7).jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <h3>코르사주</h3>
+                                    <span>감독</span><br>
+                                    <p>
+                                        마리 크로이처
+                                    </p>
+                                </div>
+                                <img src="./images/movie (8).jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <!-- /3-3. Work -->
+
+            <hr class="m_divider">
+
+            <!-- 3-4. Blog -->
+            <article class="blog_section container">
+                <div class="cf">
+                    <h2 class="sec_title">시청자 추천</h2>
+                    <ul class="blog_list">
+                        <li>
+                            <a href="#">
+                                <img src="./images/blog (1).jpg" alt="아바타블로그">
+                            </a>
+                            <time datetime="2022-12-15">Dec 10, 2022</time>
+                            <a href="#">
+                                <h3>
+                                    거장 제임스 카메론의 야심찬 도전
+                                </h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/blog (2).jpg" alt="코르사주블로그">
+                            </a>
+                            <time datetime="2022-12-10">Dec 15, 2022</time>
+                            <a href="#">
+                                <h3>
+                                    황후, 그 영원히 아름다워야 하는 삶
+                                </h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/blog (3).jpg" alt="블랙팬서블로그">
+                            </a>
+                            <time datetime="2022-09-20">May 7, 2021</time>
+                            <a href="#">
+                                <h3>
+                                    클래스를 보여준다, 다시 증명한 마블
+                                </h3>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <!-- /3-4. Blog -->
+        </section>
+        <!-- /3. Content -->
+        <!-- 4.Footer -->
+        <footer class="footer">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12654.250624365135!2d127.0450105!3d37.5418055!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xacdb9c87ef97a2b!2sMegabox%20Seongsu!5e0!3m2!1sen!2skr!4v1671784408558!5m2!1sen!2skr"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <p>
+                COPYRIGHT ALL RIGHTS RESERVED.
+            </p>
+        </footer>
+        <!-- /4.Footer -->
+    </div>
+<script>
+    $('.menu_toggle_btn').click(function(){
+        $('.gnb').stop().slideToggle(200);
+    });
+    var allLink = document.querySelectorAll('a');
+    for(var i = 0; i<allLink.length; i++){
+        allLink[i].addEventListener('click',function(){
+            event.preventDefault();
+        });
+    }
+</script>
+</body>
+</html>
